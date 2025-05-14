@@ -80,7 +80,7 @@ export const AuthButton = ({
                 {isLoading ? (
                     <ActivityIndicator
                         size="large"
-                        color={colors.orange}
+                        color={disabled ? colors.orange : colors.white}
                     />
                 ) : (
                     <Animated.Text style={[

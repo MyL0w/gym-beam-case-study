@@ -14,6 +14,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const [token, setToken] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const [initialize, setInitialize] = useState<boolean>(false);
 
     const fetchUserData = async (userId: number) => {
         try {
@@ -37,8 +38,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
     useEffect(() => {
         const bootstrapAsync = async () => {
+            setInitialize(true);
             try {
-                setIsLoading(true);
                 const storedToken = await AsyncStorage.getItem("userToken");
 
                 if (storedToken) {
@@ -62,7 +63,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
                 console.log("Failed to load auth state", err);
                 setIsLoading(false);
             } finally {
-                setIsLoading(false);
+                setInitialize(false);
             }
         };
 
@@ -126,6 +127,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         login,
         logout,
         clearError,
+        initialize,
     };
 
     return (

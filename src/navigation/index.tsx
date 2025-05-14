@@ -5,11 +5,11 @@ import { AppBottomTabs } from "@navigation/AppBottomTabs";
 import { LoadingScreen } from "@components/LoadingScreen/LoadingScreen";
 
 const Navigation = () => {
-    const { user, isLoading } = useAuth();
+    const { user, initialize } = useAuth();
 
     return (
         <NavigationContainer>
-            {isLoading ? (
+            {initialize ? (
                 <LoadingScreen/>
             ) : (
                 !user ? <AuthStack/> : <AppBottomTabs/>

@@ -5,6 +5,7 @@ export interface AuthState {
     token: string | null;
     isLoading: boolean;
     error: string | null;
+    initialize: boolean;
 }
 
 export interface AuthContextType extends AuthState {
