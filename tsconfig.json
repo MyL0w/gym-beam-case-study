@@ -27,11 +27,14 @@
       "@context/*": [
         "lib/context/*"
       ],
-      "@helpers/*": [
-        "lib/helpers/*"
+      "@utils/*": [
+        "lib/utils/*"
       ],
       "@hooks/*": [
         "lib/hooks/*"
+      ],
+      "@api/*": [
+        "api/*"
       ]
     }
   }

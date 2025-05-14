@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+    <style>
+        .text-gym {
+        font-family: Arial, sans-serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 36px;
+        fill: white;
+        }
+        .text-beam {
+        font-family: Arial, sans-serif;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 36px;
+        fill: white;
+        }
+    </style>
+    <text x="10" y="40">
+        <tspan class="text-gym">Gym</tspan><tspan class="text-beam">Beam</tspan>
+    </text>
+</svg>
